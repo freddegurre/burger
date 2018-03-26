@@ -10,14 +10,15 @@ var orm = {
         cb(result); 
     }); 
   },
-  /*insertOne: function(whatTable, value , cb) {
-    var query = "SELECT * FROM " + whatTable + "WHERE id = " + value +";"; 
+  insertOne: function(whatTable, value , cb) {
+    var query = "INSERT INTO " + whatTable + "(burger_name) VALUES" + "('"+ value + "')"; 
     connection.query(query, function(err, result){
       if (err) {
-        throw err;}
+        throw err;
+      }
         cb(result); 
     });
-  }*/
+  }
   //updateOne: function(whatTable, value, cb)
 }
 

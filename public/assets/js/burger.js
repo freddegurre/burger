@@ -12,6 +12,7 @@ $(function(){
             data: newburg
         }).then(function(){
              console.log(newburg);
+             location.reload();
         })
        
 

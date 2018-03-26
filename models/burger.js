@@ -6,10 +6,10 @@ var burger = {
         cb(res);
       });
     }, 
-    /*insertOne: function(val, cb) {
+    insertOne: function(val, cb) {
         orm.insertOne("burgers", val, function(res){
-            cb(res)
+            cb(res); 
         });
-    }*/
+    }
 }
 module.exports = burger;
