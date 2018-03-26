@@ -1,24 +1,45 @@
-<h1>Burgers</h1>
-
-<h2>eat!</h2>
-
-<ul>
-  {{#each burgers}}
-    <li>
-      <p>id: {{id}}</p>
-      <p>Burger: {{burger_name}}</p>
-      <p>devoured: {{devoured}}</p>
-      <button class="devoure" data-id="{{id}}" data-devoured="{{devoured}}">
-		 DEVOURE!
-	</button>
-    </li>
-  {{/each}}
-</ul>
-
-<form class="create-form">
-  <div class="form-group">
-    <textarea id="burger" name="newBurg" rows="4" cols="40"></textarea>
+<div class="container">
+  <div class="row">
+    <div class="center">
+      <h1>Burgers</h1>
+    </div>
   </div>
 
-  <button type="submit" id="buttonPost">Order burger</button>
-</form>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="center">
+        {{#each burgers}}
+        <div class="row burgerDiv">
+          <p>{{id}}. {{burger_name}}</p>
+          <button class="devoure" data-id="{{id}}" data-devoured="{{devoured}}">
+            DEVOURE!
+          </button>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="center">
+
+        {{#each eaten}}
+        <div class="devoured">
+          <p>{{id}}.{{burger_name}} </p>
+        </div>
+        {{/each}}
+
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="center">
+      <form class="create-form">
+        <div class="form-group">
+          <textarea id="burger" name="newBurg" rows="4" cols="40"></textarea>
+        </div>
+        <button type="submit" id="buttonPost">Order burger</button>
+      </form>
+    </div>
+  </div>
+
+</div>
