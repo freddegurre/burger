@@ -1,7 +1,7 @@
 <div class="container">
-  <div class="row">
     <div class="center">
       <h1>Burgers</h1>
+      <img src="https://cdn6.aptoide.com/imgs/8/9/3/893015af06712a2f14a0d856be8bd4be_icon.png?w=240" alt="burger">
     </div>
   </div>
 
@@ -10,9 +10,9 @@
       <div class="center">
         {{#each burgers}}
         <div class="row burgerDiv">
-          <p>{{id}}. {{burger_name}}</p>
-          <button class="devoure" data-id="{{id}}" data-devoured="{{devoured}}">
-            DEVOURE!
+          <span>{{id}}. {{burger_name}}</span>
+          <button class="btn-warning pull-right" data-id="{{id}}" data-devoured="{{devoured}}">
+            Devoure!
           </button>
         </div>
         {{/each}}
@@ -24,7 +24,7 @@
 
         {{#each eaten}}
         <div class="devoured">
-          <p>{{id}}.{{burger_name}} </p>
+          <span>{{id}}.{{burger_name}} </span>
         </div>
         {{/each}}
 
@@ -37,7 +37,7 @@
         <div class="form-group">
           <textarea id="burger" name="newBurg" rows="4" cols="40"></textarea>
         </div>
-        <button type="submit" id="buttonPost">Order burger</button>
+        <button class="btn-primary" type="submit" id="buttonPost">Order burger</button>
       </form>
     </div>
   </div>
