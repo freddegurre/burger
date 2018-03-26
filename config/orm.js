@@ -18,6 +18,15 @@ var orm = {
       }
         cb(result); 
     });
+  }, 
+  update: function(whatTable, value, cb) {
+    var query = "UPDATE burgers SET devoured = true WHERE id =" + value + ";"; 
+    connection.query(query, function (err, result){
+      if (err) {
+        throw err;
+      }
+        cb(result);
+    });
   }
   //updateOne: function(whatTable, value, cb)
 }

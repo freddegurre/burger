@@ -10,6 +10,11 @@ var burger = {
         orm.insertOne("burgers", val, function(res){
             cb(res); 
         });
+    }, 
+    update: function(val, cb) {
+        orm.update("burgers", val, function(res){
+            cb(res);
+        });
     }
 }
 module.exports = burger;
