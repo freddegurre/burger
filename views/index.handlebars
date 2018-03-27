@@ -1,7 +1,6 @@
 <div class="container">
     <div class="center">
       <h1>Burgers</h1>
-      <img src="https://cdn6.aptoide.com/imgs/8/9/3/893015af06712a2f14a0d856be8bd4be_icon.png?w=240" alt="burger">
     </div>
   </div>
 
@@ -11,7 +10,7 @@
         {{#each burgers}}
         <div class="row burgerDiv">
           <span>{{id}}. {{burger_name}}</span>
-          <button class="btn-warning pull-right" data-id="{{id}}" data-devoured="{{devoured}}">
+          <button class="devoure btn-warning pull-right" data-id="{{id}}" data-devoured="{{devoured}}">
             Devoure!
           </button>
         </div>

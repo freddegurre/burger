@@ -6,6 +6,8 @@
 body{
     background-color: aqua; 
     font-family: monospace;
+    background-image: url(./burger.jpg);
+    background-size: 100%;
 }
 .burgerDiv{
     background-color: lightgrey; 
